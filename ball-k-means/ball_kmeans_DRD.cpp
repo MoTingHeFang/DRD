@@ -1087,7 +1087,7 @@ int main(int argc, char* argv[]) {
     outfile << clusteringResults.labels;
     outfile.close();
 
-    //向ClusterPointIndex.csv中输出的逻辑通过了验证
+    //向ClusterPointIndex.csv输出 的逻辑，已经验证通过
     outfile.open("ClusterPointIndex.csv");
     for (int i=0; i<=k-1; i++){
         for (int j=0; j<=clusteringResults.cluster_point_index[i].size()-1;j++){
