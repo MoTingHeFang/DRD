@@ -1089,10 +1089,11 @@ int main(int argc, char* argv[]) {
 
     //向ClusterPointIndex.csv输出 的逻辑，已经验证通过
     outfile.open("ClusterPointIndex.csv");
-    for (int i=0; i<=k-1; i++){
-        for (int j=0; j<=clusteringResults.cluster_point_index[i].size()-1;j++){
+    for (int i=0; i<=k-1; i++){//ok
+        for (int j=0; j<=int(clusteringResults.cluster_point_index[i].size()-2);j++){
             outfile << clusteringResults.cluster_point_index[i][j] <<',';
         }
+        outfile << clusteringResults.cluster_point_index[i].back();
         outfile << endl;
     }
     outfile.close();
